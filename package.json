@@ -1,0 +1,45 @@
+{
+  "name": "@sishuguojixuefu/react-native-image",
+  "version": "0.0.0",
+  "description": "尺寸自适应的图片组件",
+  "main": "index.ts",
+  "scripts": {
+    "postversion": "git push --tags && git push && npm publish",
+    "update": "yarn sishu && yarn sishuguojixuefu && yarn veronica",
+    "sishu": "yarn upgrade -S @sishu --latest",
+    "sishuguojixuefu": "yarn upgrade -S @sishuguojixuefu --latest",
+    "veronica": "yarn upgrade -S @veronica --latest"
+  },
+  "homepage": "",
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "author": {
+    "name": "杨俊宁",
+    "url": "https://youngjuning.js.org",
+    "email": "youngjuning@aliyun.com"
+  },
+  "devDependencies": {
+    "@sishuguojixuefu/eslint-config": "^0.5.8",
+    "@types/react": "^16.9.17",
+    "@types/react-native": "^0.60.26",
+    "husky": "^3.1.0",
+    "lint-staged": "^9.5.0"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "**/*.{js,jsx,ts,tsx}": [
+      "eslint --fix",
+      "git add"
+    ],
+    "**/*.{md,json}": [
+      "prettier --write",
+      "git add"
+    ]
+  }
+}
