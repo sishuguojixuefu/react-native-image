@@ -4,16 +4,12 @@
   "description": "尺寸自适应的图片组件",
   "main": "index.ts",
   "scripts": {
-    "postversion": "git push --tags && git push && npm publish",
-    "update": "yarn sishu && yarn sishuguojixuefu && yarn veronica",
-    "sishu": "yarn upgrade -S @sishu --latest",
-    "sishuguojixuefu": "yarn upgrade -S @sishuguojixuefu --latest",
-    "veronica": "yarn upgrade -S @veronica --latest"
+    "postversion": "git push --tags && git push && npm publish"
   },
-  "homepage": "",
+  "homepage": "https://github.com/sishuguojixuefu/react-native-image",
   "repository": {
     "type": "git",
-    "url": ""
+    "url": "https://github.com/sishuguojixuefu/react-native-image.git"
   },
   "author": {
     "name": "杨俊宁",
