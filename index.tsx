@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Image as RNImage, ImageProps, View } from 'react-native'
+import { Image as RNImage, ImageProps } from 'react-native'
 
 class Image extends Component<ImageProps, any> {
   constructor(props: ImageProps) {
@@ -8,6 +8,9 @@ class Image extends Component<ImageProps, any> {
       width: 0,
       height: 0,
     }
+  }
+
+  UNSAFE_componentWillMount() {
     const { width, height, source } = this.props
     if (typeof source === 'number') {
       const info = RNImage.resolveAssetSource(source)
