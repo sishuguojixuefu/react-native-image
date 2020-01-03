@@ -2,7 +2,7 @@
   "name": "@sishuguojixuefu/react-native-image",
   "version": "0.0.2",
   "description": "尺寸自适应的图片组件",
-  "main": "index.ts",
+  "main": "index.tsx",
   "scripts": {
     "postversion": "git push --tags && git push && npm publish"
   },

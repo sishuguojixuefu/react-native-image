@@ -30,9 +30,7 @@ class Image extends Component<ImageProps, any> {
 
   render() {
     return (
-      <View style={this.props.style}>
-        <RNImage {...this.props} style={[this.props.style, { height: this.state.height, width: this.state.width }]} />
-      </View>
+      <RNImage {...this.props} style={[this.props.style, { height: this.state.height, width: this.state.width }]} />
     )
   }
 }
