@@ -1,8 +1,13 @@
 import React, { Component } from 'react'
 import { Image as RNImage, ImageProps } from 'react-native'
 
-class Image extends Component<ImageProps, any> {
-  constructor(props: ImageProps) {
+interface Props extends ImageProps {
+  width: number
+  height: number
+}
+
+class Image extends Component<Props, any> {
+  constructor(props: Props) {
     super(props)
     this.state = {
       width: 0,
@@ -33,6 +38,7 @@ class Image extends Component<ImageProps, any> {
 
   render() {
     return (
+      // @ts-ignore
       <RNImage {...this.props} style={[this.props.style, { height: this.state.height, width: this.state.width }]} />
     )
   }
