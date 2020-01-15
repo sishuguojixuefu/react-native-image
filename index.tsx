@@ -2,8 +2,8 @@ import React, { Component } from 'react'
 import { Image as RNImage, ImageProps } from 'react-native'
 
 interface Props extends ImageProps {
-  width: number
-  height: number
+  width?: number
+  height?: number
 }
 
 class Image extends Component<Props, any> {
